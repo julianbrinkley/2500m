@@ -9,5 +9,6 @@ namespace CharterERP.Core
     {
        IQueryable<Employee> Employees { get; }
        IQueryable<Department> Departments { get; }
+       void Save();
     }
 }
