@@ -15,7 +15,8 @@
     {
 
         <li>
-            @department.Name
+
+            @Html.ActionLink(@department.Name, "detail", "department", new {department.Id }, null)
 
         </li>
 
