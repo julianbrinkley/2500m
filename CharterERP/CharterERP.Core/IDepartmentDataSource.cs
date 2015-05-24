@@ -5,12 +5,9 @@ using System.Text;
 
 namespace CharterERP.Core
 {
-   public  class IDepartmentDataSource
+   public interface IDepartmentDataSource
     {
-
        IQueryable<Employee> Employee { get; }
        IQueryable<Department> Departments { get; }
-
-
     }
 }
