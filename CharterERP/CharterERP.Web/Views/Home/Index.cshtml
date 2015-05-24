@@ -1,5 +1,25 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<CharterERP.Core.Department>
+
+@{
+    ViewBag.Title = "All Departments";
 }
 
-<h1>Department Manager</h1>
+<h1>@ViewBag.Title</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<ul>
+    @foreach (var department in Model)
+    {
+
+        <li>
+            @department.Name
+
+        </li>
+
+
+    }
+</ul>
+

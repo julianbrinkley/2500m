@@ -7,7 +7,7 @@ namespace CharterERP.Core
 {
    public interface IDepartmentDataSource
     {
-       IQueryable<Employee> Employee { get; }
+       IQueryable<Employee> Employees { get; }
        IQueryable<Department> Departments { get; }
     }
 }

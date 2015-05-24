@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CharterERP.Core;
+using CharterERP.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +10,20 @@ namespace CharterERP.Web.Controllers
 {
     public class HomeController : Controller
     {
+     
+        private IDepartmentDataSource _db;
+
+
+        public HomeController(IDepartmentDataSource db)
+        {
+            _db = db;
+        }
+
         public ActionResult Index()
         {
+            var allDepartments = _db.Departments;
 
-
-            return View();
+            return View(allDepartments);
         }
 
         public ActionResult About()
